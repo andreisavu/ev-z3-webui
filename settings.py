@@ -1,0 +1,3 @@
+
+TEMPLATE_FOLDER = 'templates'
+
