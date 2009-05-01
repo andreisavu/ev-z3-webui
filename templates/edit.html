@@ -1,0 +1,27 @@
+$def with()
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+<fieldset>
+	<legend>Upload source code</legend>
+	<input type="file" name="file" />
+	<button type="submit">Upload</button>
+</fieldset>
+</form>
+
+<form action="/upload.bin" method="post" enctype="multipart/form-data">
+<fieldset>
+	<legend>Upload binary image</legend>
+	<input type="file" name="file" />
+	<button type="submit">Upload</button>
+</fieldset>
+</form>
+
+
+<form action="/compile" method="post">
+<fieldset>
+	<legend>Edit code</legend>
+	<textarea name="code" rows="10" cols="50"></textarea><br />
+	<button type="submit">Compile</button>
+</fieldset>
+</form>
+
