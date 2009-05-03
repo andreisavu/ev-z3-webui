@@ -7,3 +7,7 @@ Features:
 - write binary image to Z3/EV module
 - lcd display live streaming
 
+Requirements:
+- web.py
+- python-pyserial
+
