@@ -4,7 +4,7 @@ import web, settings
 urls = (
     '^/$', 'index',
 	'^/exclusive$', 'exclusive',
-	'^/edit$', 'edit',
+	'^/dashboard$', 'dashboard',
 	'^/upload$', 'upload',
 	'^/about$', 'about'
 )
@@ -18,17 +18,17 @@ class index:
 
 class exclusive:
 	def POST(self):
-		raise web.seeother('/edit')
+		raise web.seeother('/dashboard')
 
-class edit:
+class dashboard:
 	def GET(self):
-		return render.edit()
+		return render.dashboard()
 
 class upload:
 	def  GET(self):
 		return render.upload()
 	def POST(self):
-		raise web.seeother('/edit')
+		raise web.seeother('/dashboard')
 
 class about:
 	def GET(self):
