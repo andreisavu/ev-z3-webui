@@ -8,10 +8,10 @@ Features:
 - lcd display live streaming
 
 Requirements:
-- python 2.6 (http://www.python.org/)
-- python-pyserial (http://pyserial.wiki.sourceforge.net/pySerial)
-- python-pyparallel (http://pyserial.wiki.sourceforge.net/pyParallel)
-- web.py (http://webpy.org/)
-- red5 (http://osflash.org/red5) - for webcam embedded live streaming
+- python 2.6 http://www.python.org/ 
+- python-pyserial http://pyserial.wiki.sourceforge.net/pySerial
+- python-pyparallel http://pyserial.wiki.sourceforge.net/pyParallel
+- web.py http://webpy.org/
+- red5 http://osflash.org/red5 - for webcam embedded live streaming
 
 
