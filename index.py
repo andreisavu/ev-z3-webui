@@ -14,7 +14,7 @@ render = web.template.render(settings.TEMPLATE_FOLDER, base='base')
 
 class index:
 	def GET(self):
-		return render.index()
+		return render.index(settings.SERIAL_PORTS)
 
 class exclusive:
 	def POST(self):

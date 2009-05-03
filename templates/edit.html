@@ -1,27 +1,58 @@
 $def with()
 
-<form action="/upload" method="post" enctype="multipart/form-data">
-<fieldset>
-	<legend>Upload source code</legend>
-	<input type="file" name="file" />
-	<button type="submit">Upload</button>
-</fieldset>
-</form>
-
-<form action="/upload.bin" method="post" enctype="multipart/form-data">
-<fieldset>
-	<legend>Upload binary image</legend>
-	<input type="file" name="file" />
-	<button type="submit">Upload</button>
-</fieldset>
-</form>
-
-
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all" id="tabs">
+   <ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+    <li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a href="#editor">Editor</a></li>
+    <li class="ui-state-default ui-corner-top"><a href="#upload">Script Upload</a></li>
+	<li class="ui-state-default ui-corner-top"><a href="#upload-bin">Binary Upload</a></li>
+	<li class="ui-state-default ui-corner-top"><a href="#demos">Demos</a></li>
+	<li class="ui-state-default ui-corner-top"><a href="#documentation">Documentation</a></li>
+  </ul>
+ 
+<div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="editor">
+<p>
 <form action="/compile" method="post">
-<fieldset>
-	<legend>Edit code</legend>
 	<textarea name="code" rows="10" cols="50"></textarea><br />
 	<button type="submit">Compile</button>
-</fieldset>
 </form>
+</p>
+</div>
+ 
+    <div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="upload">
+  <p>
+<form action="/upload" method="post" enctype="multipart/form-data">
+	<input type="file" name="file" />
+	<button type="submit">Upload</button>
+</form>
+  </p>
+  </div>
+ 
+ <div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="upload-bin">
+  <p>
+<form action="/upload.bin" method="post" enctype="multipart/form-data">
+	<input type="file" name="file" />
+	<button type="submit">Upload</button>
+</form>
+  </p>
+  </div>
+  
+   <div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="demos">
+  <p>
+@todo: Add demo script files ready to compile and run
+  </p>
+  </div>
+  
+<div class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="documentation">
+  <p>
+Documentation
+  </p>
+  </div>
 
+  
+</div>
+ 
+<script type="text/javascript">
+$$(document).ready(function() {
+  $$('#tabs').tabs();
+});
+</script>

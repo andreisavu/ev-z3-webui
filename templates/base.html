@@ -2,8 +2,30 @@ $def with(content)
 <html>
 <head>
 	<title>Module EV/Z3 Web UI</title>
+	<link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print"> 
+	<!--[if IE]>
+		<link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection">
+	<![endif]-->
+	<link type="text/css" href="/static/css/ui-darkness/jquery-ui.css" rel="stylesheet" />	
+	<script type="text/javascript" src="/static/js/jquery.js"></script>
+	<script type="text/javascript" src="/static/js/jquery-ui.js"></script>
 </head>
 <body>
+<div class="container">
+	<div class="header span-24">
+	<img src="/static/intel.jpg" style="float: left"/>
+	<div class="clear"></div>
+	<br />
+	</div>
+	
+	<div class="content span-24">
 	$:content
+	</div>
+	
+	<div class="footer span-24">
+	
+	</div>
+</div>
 </body>
 </html>
