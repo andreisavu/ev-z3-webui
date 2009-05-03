@@ -2,7 +2,7 @@
 Module Z3/EV Web UI
 
 Features:
-- allow exclusive access at port level (serial or parallel)
+- allow exclusive access at port leveL - serial only
 - edit, compile & link assembly code
 - write binary image to Z3/EV module
 - lcd display live streaming
