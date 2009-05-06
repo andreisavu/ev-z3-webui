@@ -1,0 +1,9 @@
+
+masm FILE.ASM
+
+link OBJ_FILE
+
+exe2bin EXE_FILE BIN_FILE
+
+Write .bin file to the module
+
