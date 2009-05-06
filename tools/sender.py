@@ -18,7 +18,7 @@ def parse_cli_params():
 
 def open_port(port):
 	try:
-		s = serial.Serial(port=port, baudrate=9600, rtscts=1)
+		s = serial.Serial(port=port, baudrate=1200, rtscts=1)
 		return s
 	except:
 		return None
