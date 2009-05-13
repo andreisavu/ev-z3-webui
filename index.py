@@ -7,6 +7,9 @@ urls = (
 	'^/dashboard$', 'dashboard',
 	'^/upload$', 'upload',
 	'^/upload\.bin$', 'upload_bin',
+	'^/demos$', 'demos',
+	'^/docs$', 'docs',
+	'^/live$', 'live',
 	'^/about$', 'about'
 )
 
@@ -43,6 +46,18 @@ class upload_bin:
 			z3.write_serial(0, input.file.file.read())
 			raise web.seeother('/dashboard')
 		raise web.seeother('/dashboard')
+
+class demos:
+	def GET(self):
+		return render.demos()
+
+class docs:
+	def GET(self):
+		return render.docs()
+
+class live:
+	def GET(self):
+		return render.live()
 
 class about:
 	def GET(self):
