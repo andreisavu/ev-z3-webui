@@ -1,4 +1,9 @@
-$def with()
+$def with(files=[])
 
-Demos
+<h2>Demos</h2>
+
+<ul>
+$for file in files:
+	<li><a href="/static/samples/$file">$file</a></li>
+</ul>
 

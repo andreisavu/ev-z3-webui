@@ -49,7 +49,9 @@ class upload_bin:
 
 class demos:
 	def GET(self):
-		return render.demos()
+		import os
+		files = os.listdir('static/samples')
+		return render.demos(files)
 
 class docs:
 	def GET(self):
