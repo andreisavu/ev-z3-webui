@@ -36,7 +36,7 @@ class upload:
 
 class upload_bin:
 	def  GET(self):
-		return render.upload()
+		return render.uploadbin()
 	def POST(self):
 		cgi.maxlen = settings.MAX_UP_FILE_SIZE
 
