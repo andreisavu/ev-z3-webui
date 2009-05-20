@@ -14,4 +14,7 @@ Requirements:
 - web.py http://webpy.org/
 - red5 http://osflash.org/red5 - for webcam embedded live streaming
 
+Hardware components:
+- 3 digital switches
+- parallel cable
 
