@@ -12,7 +12,10 @@ urls = (
 	'^/demos$', 'demos',
 	'^/docs$', 'docs',
 	'^/live$', 'live',
-	'^/about$', 'about'
+	'^/about$', 'about',
+	'^/z3/reset$', 'z3_reset',
+	'^/z3/load$','z3_load',
+	'^/z3/run$', 'z3_run'
 )
 
 app = web.application(urls, globals())
@@ -90,6 +93,22 @@ class live:
 class about:
 	def GET(self):
 		return render.about()
+
+class z3_reset:
+	def POST(self):
+		z3.reset()
+		raise web.seeother('/dashboard')
+
+class z3_load:
+	def POST(self):
+		z3.load()
+		raise web.seeother('/dashboard')
+
+class z3_run:
+	def POST(self):
+		z3.run()
+		raise web.seeother('/dashboard')
+
 
 if __name__ == "__main__":
     app.run()
