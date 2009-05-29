@@ -46,7 +46,7 @@ class edit:
 
 	def POST(self, str):
 		cgi.maxlen = settings.MAX_UP_FILE_SIZE
-		input = web.input(file={})
+		input = web.input(file={}, _unicode=False)
 		if input.file.file:
 			content = input.file.file.read()
 		else:
@@ -55,7 +55,7 @@ class edit:
 
 class compile:
 	def GET(self):
-		input = web.input(source='')
+		input = web.input(source='',  _unicode=False)
 		return render.compile(input.source)
 
 class upload:
@@ -70,7 +70,7 @@ class upload_bin:
 	def POST(self):
 		cgi.maxlen = settings.MAX_UP_FILE_SIZE
 
-		input = web.input(file={})
+		input = web.input(file={}, _unicode=False)
 		if input.file.file:
 			z3.write_serial(0, input.file.file.read())
 			raise web.seeother('/dashboard')
