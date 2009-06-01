@@ -72,8 +72,11 @@ class upload_bin:
 
 		input = web.input(file={}, _unicode=False)
 		if input.file.file:
+			z3.reset()
+			z3.load()
 			z3.write_serial(0, input.file.file.read())
-			raise web.seeother('/dashboard')
+			z3.reset()
+			raise web.seeother('/live')
 		raise web.seeother('/dashboard')
 
 class demos:
