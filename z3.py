@@ -41,7 +41,9 @@ def set_parallel(v,t=0.5):
 	return False
 
 def reset():
-	return set_parallel(1)
+	r = set_parallel(1)
+	time.sleep(2)
+	return r
 
 def load():
 	return set_parallel(2)
